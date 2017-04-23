@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<title>katie bowers band</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="katie bowers, katie bowers band, baltimore, cats eye, cats eye pub, leadbetters, fells point, baltimore music, fells point music, joe scala, mosno, chris peacock, ken g shorts, thames street"
+/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body {
+        font-family: "Lato", sans-serif
+    }
+    
+    #kbb-bar {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: rgba(0, 0, 0, .3);
+        width: 100%;
+    }
+    
+    #katiebowersbandtitle {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 35px;
+        font-weight: bold;
+        margin-bottom: 0px;
+    }
+    
+    .recordings-title {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    
+    .w3-red {
+        float: right;
+    }
+    
+    .w3-ul li {
+        background-color: #000;
+        color: #eee;
+        border-bottom: 1px solid #333;
+        padding: 15px!important;
+    }
+    
+    .w3-border {
+        border-left: 0;
+    }
+    
+    .next-show-tag {
+        color: yellow;
+        display: inline-block;
+        margin-right: 10px;
+    }
+    
+    .listen {
+        display: block;
+    }
+    
+    .music-table {
+        width: 100%;
+        color: white;
+        font-size: 12px;
+    }
+    
+    .img-link img {
+        width: 100px;
+    }
+    
+    #contact {
+        color: white;
+    }
+</style>
+
+<body style="background-color: black" ng-app="kbbApp" ng-controller="kbbCtrl" ng-cloak>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:2000px;margin-top:0">
+
+
+
+        <div class="mySlides w3-display-container w3-center">
+            <img src="catseye2.jpg" style="width:100%;">
+            <div id="kbb-bar" class="w3-display-bottommiddle w3-container w3-text-white w3-padding-8">
+                <h3 id="katiebowersbandtitle">katie bowers band</h3>
+                <p style="margin-top:0px"><b>Fells Point, Baltimore, MD</b></p>
+            </div>
+        </div>
+
+        <!-- The Tour Section -->
+        <div class="w3-black" id="tour" ng-cloak>
+            <div class="w3-container w3-content w3-padding-32" style="max-width:800px">
+                <!--<h5 class="w3-wide w3-center" style="color:#555; font-family:Georgia, 'Times New Roman', Times, serif">Upcoming Shows</h2>-->
+                <!--<p class="w3-opacity w3-center"><i></i></p><br>-->
+
+                <h3 class="recordings-title" style="text-align:center; color: white">Live shows...</h3>
+                <br>
+                <ul class="w3-ul w3-white w3-text-grey" ng-show="calEvents && calEvents.length > 0">
+                    <li ng-repeat="item in calEvents" class="w3-padding" ng-cloak>
+                        <span class="next-show-tag" ng-show="$index == 0">NEXT SHOW</span>
+                        <b>{{item.title}}</b> -
+                        <span>{{item.date.dayOfWeek}} {{item.date.month}} {{ item.date.day}} </span> -
+                        <span>{{ item.date.time }}</span> {{item.test}}
+                        <span ng-show="item.tonightText" class="w3-tag w3-red w3-margin-left">{{ item.tonightText }}</span>
+                    </li>
+                    <li class="w3-padding"><a href="calendar.html" target="calendar">Full calendar...</a> </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="w3-container w3-content w3-padding-16">
+            <h3 class="recordings-title" style="text-align:center; color: white">Some recordings...</h3>
+            <br><br>
+            <table class="music-table">
+                <tr>
+                    <td>
+                        <a class="img-link" href="http://katieandjoe.bandcamp.com/" target="_new" width="100px">
+                            <img src="http://f1.bcbits.com/img/a2756835299_7.jpg" />
+                        </a>
+                    </td>
+                    <td>
+                        <a href="http://katieandjoe.bandcamp.com/" target="_new">
+                                Live at Takoma Park Folk Festival
+                            </a>
+                        <br>Seven original songs recorded live, with Mosno on djembe.
+                        <br>Released January 2014.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="img-link" href="http://katieandjoe.bandcamp.com/album/the-revolution-ep" target="_new">
+                            <img src="http://f1.bcbits.com/img/a4038510317_7.jpg">
+                        </a>
+                    </td>
+                    <td><a href="http://katieandjoe.bandcamp.com/album/the-revolution-ep" target="_new">
+                                The Revolution EP
+                            </a>
+                        <br>Three 'no-frills' original tracks.
+                        <br>Released May 2011.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="img-link" href="https://soundcloud.com/josephscala/sets/skin_bones" target="_new">
+                            <img src="https://i1.sndcdn.com/artworks-000102375090-mulkb3-t200x200.jpg">
+                        </a>
+                    </td>
+                    <td><a href="https://soundcloud.com/josephscala/sets/skin_bones" target="_new">
+                                Skin + Bones
+                            </a>
+                        <br>Joe's CD of original music.
+                        <br>Released January 2015./td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="img-link" href="http://www.youtube.com/joetime11">
+                            <img style="background-color: white;"" src="http://www.youtube.com/yt/brand/media/image/YouTube-logo-full_color.png" class="pull-left" style="border: 1px solid #ddd" />
+                        </a>
+                    </td>
+                    <td><a href="http://www.youtube.com/yt/brand/media/image/YouTube-logo-full_color.png" target="_new">
+                                Our YouTube Page
+                            </a>
+                        <br>Check out some videos of our live performances here.</td>
+                </tr>
+
+            </table>
+
+
+        </div>
+
+        <!-- The Contact Section -->
+        <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+            <!--<h2 class="w3-wide w3-center">CONTACT</h2>-->
+            <!--<p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>-->
+            <div class="w3-row w3-padding-32" style="text-align:center">
+                We would love to hear from you! Email us here: <a href="mailto:katieandjoe.us@gmail.com">katieandjoe.us@gmail.com</a>                We are also available for any fun events you may be hosting.
+                <p>Here we are on facebook: Katie &amp; Joe <br />p.s. If you send a friend request, include a short message
+                    so we know you're not a dirty spammer!</p>
+
+            </div>
+        </div>
+
+        <!-- End Page Content -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center" style="color:#888">
+        LK &hearts; MJ
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="ctrl.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+    <script>
+        /* Automatic Slideshow - change image every 4 seconds
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 4000);
+        }
+        /
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }*/
+    </script>
+
+</body>
+
+</html>
